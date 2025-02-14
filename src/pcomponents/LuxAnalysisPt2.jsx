@@ -1,0 +1,18 @@
+import React from 'react';
+import lux_img_pt2 from "../pictures/luxanalysispt2.png";
+
+const LuxAnalysisPt2 = () => {
+  return (
+    <div className="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden p-6">
+        <h1 className="text-2xl font-bold text-center">Sectional Analysis</h1>
+
+        <img
+          src={lux_img_pt2}
+          alt="LUX Analysis"
+          className="w-full h-[320px] pt-4"
+        />
+    </div>
+  );
+};
+
+export default LuxAnalysisPt2;

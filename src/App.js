@@ -24,6 +24,8 @@ import Dashboard from './pages/Dashboard';
 import Documentation from './pages/Documentation';
 import Login from './pages/Login';
 import ChillerDetails from './pages/ChillerDetail';
+import Profile from './pages/Profile';
+import Dgd from './dcomponents/Dgd';
 
 const AppLayout = ({ children }) => {
   const location = useLocation();
@@ -87,7 +89,8 @@ const App = () => {
           <Route path="/monitor/batteries" element={<BatteriesMonitor />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/documentation" element={<Documentation />} />
-
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/generator/:id" element={<Dgd />} />
         </Routes>
       </AppLayout>
     </BrowserRouter>

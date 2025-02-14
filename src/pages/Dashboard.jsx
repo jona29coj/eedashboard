@@ -15,6 +15,7 @@ import FacilityUsage from "../dcomponents/FacilityUsage";
 import WheeledInSolar from "../dcomponents/WheeledInSolar";
 import PeakDemand from "../dcomponents/PeakDemand";
 import EnergyConsumption from "../dcomponents/EnergyConsumption";
+import DieselGeneration from "../dcomponents/DieselGeneration";
 
 const Dashboard = () => {
   return (
@@ -45,8 +46,9 @@ const Dashboard = () => {
 
     {/* Remaining Cards */}
     <ChillerCard />
-    <FacilityInformation />
+    <DieselGeneration/>
     <WheeledInSolar />
+    <FacilityInformation />
     <PeakDemand />
     <EnergyConsumption />
     <WaterStorage />

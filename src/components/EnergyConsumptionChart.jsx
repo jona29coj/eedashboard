@@ -2,7 +2,7 @@ import React from "react";
 import Plot from "react-plotly.js";
 
 const EnergyConsumptionChart = () => {
-  const xLabels = Array.from({ length: 31 }, (_, i) => `Day ${i + 1}`);
+  const xLabels = Array.from({ length: 31 }, (_, i) => i + 1);
   const yLabels = Array.from({ length: 24 }, (_, i) => `${i}:00`);
   const zValues = Array.from({ length: 24 }, () =>
     Array.from({ length: 31 }, () => Math.random() * 5) // Random data for heatmap
@@ -17,7 +17,11 @@ const EnergyConsumptionChart = () => {
             x: xLabels,
             y: yLabels,
             type: "heatmap",
-            colorscale: "YlOrRd",
+            colorscale: [
+              [0, "green"],
+              [0.5, "yellow"],
+              [1, "red"],
+            ],
             colorbar: { title: "kWh", titleside: "right" },
           },
         ]}
@@ -30,7 +34,7 @@ const EnergyConsumptionChart = () => {
             tickmode: "array",
             tickvals: xLabels,
             ticktext: xLabels,
-            tickangle: 45,
+            tickangle: 0,
             automargin: true,
             pad: { t: 30 }, // Padding at the top of the x-axis
           },
@@ -46,7 +50,7 @@ const EnergyConsumptionChart = () => {
         }}
         config={{
           responsive: true,
-          displaylogo: false, // This disables the Plotly logo
+          displayModeBar: false, // This disables the toolbar (zoom, download, etc.)
         }}
         style={{ width: "100%", height: "100%" }}
       />

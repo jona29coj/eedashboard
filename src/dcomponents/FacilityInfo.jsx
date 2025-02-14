@@ -16,7 +16,7 @@ const FacilityInfo = () => {
             Location: <span className="font-semibold">Bangalore, India</span>
           </p>
           <p>
-            Climate: <span className="font-semibold">Tropical Savanna</span>
+            Climate: <span className="font-semibold">Hot and Humid</span>
           </p>
         </div>
       </div>
